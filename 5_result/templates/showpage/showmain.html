@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block title %} 구직 트랜드 분석 플랫폼 {% endblock %}
+{% load static %}
+{% block content %}
+<link rel=" stylesheet" href="{% static 'showmain/style.css' %}">
+
+<div id="main" class="main">
+
+    <section class="section">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <!--  style="background:none; box-shadow:none;" -->
+                <div class="card">
+                    <div class="card-body" style="height:700px;">
+
+                        <!--제목-->
+                        <div class="title">
+                            <span class="text1">Welcome To</span>
+                            <span class="text2">Job Trend Analysis Platform</span>
+                        </div>
+
+                        <!--최근 인기 구직 트랜드 키워드-->
+                        <h2 class="animate-text-title">
+                            <i class="bi bi-trophy" style="color:#D5A11E; font-size:1em;"></i>
+                            &nbsp;&nbsp;최근 인기 구직 트랜드 키워드
+                            <i class="bi bi-trophy" style="color:#D5A11E; font-size:1em;"></i>
+                        </h2>
+                        <div class="animate-text">
+                            <span>요양보호사</span>
+                            <span>생산</span>
+                            <span>센터</span>
+                            <span>현장</span>
+                            <span>사무</span>
+                        </div>
+
+                        <div class="waveWrapper waveAnimation">
+                            <div class="waveWrapperInner bgTop">
+                                <div class="wave waveTop"
+                                    style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')">
+                                </div>
+                            </div>
+                            <div class="waveWrapperInner bgMiddle">
+                                <div class="wave waveMiddle"
+                                    style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')">
+                                </div>
+                            </div>
+                            <div class="waveWrapperInner bgBottom">
+                                <div class="wave waveBottom"
+                                    style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--워드클라우드-->
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h2 class="main-title" style="font-size: 35px;">Job Search Trend Keywords</h2>
+                        <div class="d-flex justify-content-center">
+                            <img class="img-options" src="{% static 'showmain/cloud.png' %}">
+                            <div class="glow-wrap">
+                                <i class="glow"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--전체 채용 공고-->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body" style="height:395px;">
+                        <h2 class="main-title" style="font-size: 35px;">Total Job Postings</h2>
+
+                        <p class = "number-text">수집된 채용공고 데이터</p>
+                        <div id="number">0</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기능 설명 -->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body" style="height:450px;">
+
+                        <div class="img-all">
+                            <h2 class="main-title" style="font-size: 35px;">SERVICE</h2>
+
+                            <div class="container">
+                                <h3 class="main-title" style="color: #2a2727; font-size: 22px;">
+                                    <i class="bi bi-bar-chart"></i>&nbsp;&nbsp;통계정보
+                                </h3>
+                                <div class="content">
+                                    <div class="content-overlay"></div>
+                                    <img class="content-image" src="{% static 'showmain/stat.png' %}">
+                                    <div class="content-details fadeIn-TOP">
+                                        <h3>Statistical Info</h3>
+                                        <p>지역별 & 직종별로 채용정보 통계 분석을 확인하세요</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <h3 class="main-title" style="color: #2a2727; font-size: 22px;">
+                                    <i class="bi bi-journal-text"></i>&nbsp;&nbsp;채용정보
+                                </h3>
+                                <div class="content">
+                                    <div class="content-overlay"></div>
+                                    <img class="content-image" src="{% static 'showmain/keyword.png' %}">
+                                    <div class="content-details fadeIn-TOP">
+                                        <h3>Jobs Info</h3>
+                                        <p>채용공고 키워드를 검색해 최신 구직 트랜드를 알아보세요</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <h3 class="main-title" style="color: #2a2727; font-size: 22px;">
+                                <i class="bi bi-person"></i>&nbsp;&nbsp;맞춤형 채용정보
+                            </h3>
+                            <div class="content">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="{% static 'showmain/mapping.png' %}">
+                                <div class="content-details fadeIn-TOP">
+                                    <h3>Personalized Jobs Info</h3>
+                                    <p>현위치 주변에 어떤 채용공고가 있는지 확인하세요</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</div>
+</section>
+</div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'showmain/text-animation.js' %}"></script>
+{% endblock %}
